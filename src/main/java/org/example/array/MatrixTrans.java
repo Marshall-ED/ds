@@ -1,6 +1,6 @@
 package org.example.array;
 
-import sun.applet.Main;
+
 
 /**
  * @Author Marshall

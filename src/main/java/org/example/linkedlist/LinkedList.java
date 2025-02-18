@@ -3,7 +3,7 @@ package org.example.linkedlist;
 /**
  * @Author Marshall
  * @Date 2024/12/17 13:25
- * @Description:单项链表类
+ * @Description: SingleLinkedList class
  */
 public class LinkedList {
 
@@ -15,18 +15,18 @@ public class LinkedList {
     }
 
     /**
-     * 向链表末尾添加节点
+     *  Append a node to the end of the linked list
      *
      * @param value
      */
     public void append(int value) {
-        //新节点
+        //Create a new node
         ListNode newNode = new ListNode(value);
 
         if (head == null) {
             head = newNode;
         } else {
-            //现在的节点等于头节点
+            //Start from the head node
             ListNode current = head;
             while (current.next != null) {
                 current = current.next;
@@ -36,7 +36,7 @@ public class LinkedList {
     }
 
     /**
-     * 打印链表
+     * print the linked list
      */
     public void printList() {
         ListNode current = head;

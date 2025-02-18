@@ -158,7 +158,7 @@ public class SingleLinkedListDemo {
             return;//空链表无法打印
         }
         //创建一个栈，将各个结点压入栈
-        Stack<HeroNode> stack = new Stack<>();
+        Stack<HeroNode> stack = new Stack<HeroNode>();
         HeroNode cur = head.next;
 
         //将所有结点压入栈
@@ -383,29 +383,31 @@ public class SingleLinkedListDemo {
 
     }
 
+    static class HeroNode {
+        public int no;
+        public String name;
+        public String nickName;
+        public HeroNode next;//指向下一个节点
+
+        //构造方法
+        public HeroNode(int hNo, String hName, String hNickName) {
+            this.no = hNo;
+            this.name = hName;
+            this.nickName = hNickName;
+        }
+
+        @Override
+        public String toString() {
+            return "HeroNode{" +
+                    "no=" + no +
+                    ", name='" + name + '\'' +
+                    ", nickName='" + nickName + '\'' + "}";
+        }
+    }
 
 }
 
-class HeroNode {
-    public int no;
-    public String name;
-    public String nickName;
-    public HeroNode next;//指向下一个节点
 
-    //构造方法
-    public HeroNode(int hNo, String hName, String hNickName) {
-        this.no = hNo;
-        this.name = hName;
-        this.nickName = hNickName;
-    }
 
-    @Override
-    public String toString() {
-        return "HeroNode{" +
-                "no=" + no +
-                ", name='" + name + '\'' +
-                ", nickName='" + nickName + '\'' + "}";
-    }
-}
 
 
